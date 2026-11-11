@@ -74,6 +74,20 @@ namespace RestaurantApp_Team_19_39_42
         static void ShowGoodRating()
         {
             Console.WriteLine("Not completed");
+
+            foreach (r in restaurants)
+            {
+                if (r.Rating > = 4.5)
+                {
+                    Console.WriteLine("Name : " + r.Name);
+                    Console.WriteLine("Type : " + r.type);
+                    Console.WriteLine("Rating : " + r.Reting);
+                    Console.WriteLine("---------------------------");
+                }
+            }
+        }
+      
+
         }
 
         // คน C รับผิดชอบ
