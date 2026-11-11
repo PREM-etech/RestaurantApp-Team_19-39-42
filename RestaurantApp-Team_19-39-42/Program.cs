@@ -79,8 +79,19 @@ namespace RestaurantApp_Team_19_39_42
         // คน C รับผิดชอบ
         static void ShowSummary()
         {
-            Console.WriteLine("Not completed");
-        }
-    }
+            if (restaurants.Count > 0)
+            {
+                Console.WriteLine("Not Restaurant data");
+                return;
+            }
 
+            var highest = restaurants.OrderByDescending(r => r.Rating).First();
+            var lowest = restaurants.OrderBy(r => r.Rating).First();
+
+            Console.WriteLine("คะแแนนสูงสุุด: " + highest.Name + " คะแนน : " + highest.Rating);
+
+            Console.WriteLine("คะแนนต่ำสุด: " + lowest.Name + " คะแนน : " + lowest.Rating);
+        }
+
+    }
 }
